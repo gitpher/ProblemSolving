@@ -16,7 +16,8 @@ def bino(n, k):
         cache[n][k] = 1
     else:
         cache[n][k] = bino(n-1, k-1) + bino(n-1, k)
+        cache[n][k] %= 10007
 
     return cache[n][k]
 
-print(bino(N, K) % 10007)
+print(bino(N, K))
