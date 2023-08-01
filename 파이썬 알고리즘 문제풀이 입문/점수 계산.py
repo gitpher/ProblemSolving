@@ -2,15 +2,15 @@ N = int(input())
 
 a = list(map(int, input().split()))
 
-acc = 0
-res = 0
+cnt = 0
+sum = 0
 for val in a:
     if val == 1:
-       acc += 1
-       res += acc * val
+       cnt += 1
+       sum += cnt
     else:
-        acc = 0
+        cnt = 0
 
-print(res)
+print(sum)
 
 
