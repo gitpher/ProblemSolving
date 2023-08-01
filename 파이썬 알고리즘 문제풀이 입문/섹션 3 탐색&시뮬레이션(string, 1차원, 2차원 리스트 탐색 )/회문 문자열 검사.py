@@ -17,15 +17,28 @@
 
 #----------------------------------
 
+# N = int(input())
+
+# for i in range(N):
+#     s = input()
+#     s = s.upper()
+#     size = len(s)
+#     for j in range(size // 2):
+#         if s[j] != s[-j-1]:
+#             print(f'#{i+1} NO')
+#             break
+#     else:
+#         print(f'#{i+1} YES')
+
+
+#--------------------------------------
+
 N = int(input())
 
 for i in range(N):
     s = input()
     s = s.upper()
-    size = len(s)
-    for j in range(size // 2):
-        if s[j] != s[-j-1]:
-            print(f'#{i+1} NO')
-            break
-    else:
+    if s == s[::-1]:
         print(f'#{i+1} YES')
+    else:
+        print(f'#{i+1} NO')
