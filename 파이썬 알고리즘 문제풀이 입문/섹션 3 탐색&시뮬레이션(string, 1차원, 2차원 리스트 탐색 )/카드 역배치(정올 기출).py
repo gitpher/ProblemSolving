@@ -8,6 +8,6 @@ for j in range(10):
     l = e - s + 1
 
     for i in range(l // 2):
-        a[s-1+i], a[e-20-1-i] = a[e-20-1-i], a[s-1+i]
+        a[s-1+i], a[e-1-i] = a[e-1-i], a[s-1+i]
 
 print(*a)
