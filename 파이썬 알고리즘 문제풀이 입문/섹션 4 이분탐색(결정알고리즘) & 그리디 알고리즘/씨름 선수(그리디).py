@@ -7,12 +7,10 @@ for i in range(N):
 
 a.sort(reverse=True)
 
-lh = 0
 lw = 0
 cnt = 0
 for h, w in a:
-    if h > lh or w > lw:
-        lh = h
+    if w > lw:
         lw = w
         cnt += 1
 
