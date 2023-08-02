@@ -1,8 +1,9 @@
-import pickle
+from collections import deque
 
 N, M = map(int, input().split())
 a = list(map(int, input().split()))
 a.sort()
+a = deque(a)
 
 # 실패한 방법
 # cnt = 1
@@ -28,10 +29,12 @@ a.sort()
 
 cnt = 0
 while a:
+    if len(a) == 1:
+        break
     if a[0] + a[-1] > M:
         a.pop()
     else:
-        a.pop(0)
+        a.popleft()
         a.pop()
     cnt += 1
 
