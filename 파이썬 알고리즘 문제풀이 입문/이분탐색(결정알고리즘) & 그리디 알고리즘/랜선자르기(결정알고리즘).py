@@ -19,18 +19,11 @@ while lt <= rt:
     cnt = 0
     for i in range(K):
         cnt += a[i] // mid
-    print(cnt)
 
-    if cnt == N:
-        if mid > max_len:
-            max_len = mid
-            lt = mid + 1
-        else:
-            rt = mid - 1
-
-    elif cnt < N:
-        rt = mid - 1
-    else:
+    if cnt >= N:
+        max_len = mid
         lt = mid + 1
+    else:
+        rt = mid - 1
 
 print(max_len)
