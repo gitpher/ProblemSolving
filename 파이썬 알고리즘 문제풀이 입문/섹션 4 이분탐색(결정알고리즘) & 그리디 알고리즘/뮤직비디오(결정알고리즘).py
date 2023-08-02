@@ -20,11 +20,13 @@ def fun(mid):
     return cnt
 
 #최소
+ans = 0
 while lt <= rt:
     mid = (lt + rt) // 2
     if fun(mid) <= M:
+        ans = mid
         rt = mid - 1
     else:
         lt = mid + 1
 
-print(lt)
+print(ans)
