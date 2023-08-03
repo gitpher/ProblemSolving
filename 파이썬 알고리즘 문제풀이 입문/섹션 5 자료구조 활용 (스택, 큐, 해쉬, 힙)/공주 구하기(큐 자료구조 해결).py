@@ -26,4 +26,5 @@ print(a[0])
 #     a.popleft()
 #     if len(a) == 1:
 #         print(a[0])
+#         a.popleft()
 
