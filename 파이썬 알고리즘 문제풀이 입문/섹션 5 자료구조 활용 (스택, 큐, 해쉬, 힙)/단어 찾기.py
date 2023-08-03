@@ -21,3 +21,4 @@ for j in range(N - 1):
 for key, val in a.items():
     if val == 1:
         print(key)
+        break
