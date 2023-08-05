@@ -8,7 +8,6 @@ def dfs(lvl):
     if lvl == M:
         print(*res)
         cnt += 1
-        return
     else:
         for i in range(N):
             res[lvl] = i + 1
