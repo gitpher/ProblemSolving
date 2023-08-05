@@ -5,7 +5,6 @@ a = list(map(int, input().split()))
 
 tot = sum(a)
 
-ans = "NO"
 def dfs(lvl, sum):
     if sum > tot // 2: # tot의 절반보다 크면 이미 나머지 절반과 같은 값이 될 수 없음
         return
