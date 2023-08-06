@@ -19,6 +19,9 @@ res = float('inf')
 #                 dfs(lvl + 1, sum + a[i])
 def dfs(lvl, sum):
     global res
+    if lvl > res: # lvl이 res보다 크면, 다시 말해 동전의 숫자가 이미 계산한 최소 동전 숫자보다 크면
+        return
+
     if sum > M:
         return
 
