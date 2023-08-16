@@ -14,5 +14,5 @@ def dfs(lvl, s):
             dfs(lvl + 1, i + 1)
 
 
-dfs(0 ,1)
+dfs(0, 1)
 print(cnt)
