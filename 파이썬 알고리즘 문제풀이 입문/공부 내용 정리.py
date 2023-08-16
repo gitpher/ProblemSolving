@@ -85,7 +85,7 @@ while lt <= rt:
 
 #===============================
 
-dy = (0, 1, 0 ,-1)=
+dy = (0, 1, 0 ,-1)
 dx = (1, 0, -1, 0)
 for k in range(4):
     ny = y + dy[k]
@@ -109,3 +109,34 @@ print(*a)
 # 해쉬 ----------- list
 # 힙 ------------- heapq
 # 딕셔너리 -------- dict
+# DFS ----------- recursion (+ if else + for)
+# BFS
+
+
+# 중복 순열 :  chk 없음
+# 순 열    : chk 있음  if chk[i] == 0 chk[i] = 1 dfs() chk[i] = 0
+# 조 합    :chk 없음 dfs(lvl, s) for i in range(s, N + 1) cmb[lvl] = i dfs(lvl + 1, i + 1)
+
+# 탐색 횟수 줄이는 방법
+# 1. sort(reverse=True)
+# 2. 밑에까지 보진 않는다 if sum + (tot - tsum) < max_val
+# 3. 이항계수를 이용한다
+# 4. 답만 얻으면 되는 것이면 sys.exit(0) 으로 브레이크
+# 5. 스킵해야 하면 return
+
+prm = []  # permutation
+cmb = []  # combination
+chk = []  # check
+bno = []  # binomial coefficient
+
+bno = [1] * N
+for i in range(1, N - 1):
+    bno[i] = bno[i - 1] * (N - i) // i
+
+def dfs(lvl): dfs(0)
+def dfs(lvl, sum): dfs(0, 0)
+def dfs(lvl, sum, tsum): dfs(0, 0, 0)
+def dfs(lvl, s): dfs(0, 1)
+
+
+
