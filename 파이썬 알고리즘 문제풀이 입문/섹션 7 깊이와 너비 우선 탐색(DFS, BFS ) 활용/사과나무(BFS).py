@@ -3,8 +3,8 @@ from collections import deque
 N = int(input())
 g = [ list(map(int, input().split())) for _ in range(N) ]
 
-dy = [-1, 0, 1, 0]
-dx = [0, 1, 0, -1]
+dy = (-1, 0, 1, 0)
+dx = (0, 1, 0, -1)
 chk = [ [0] * N for _ in range(N) ]
 
 mid = N // 2
