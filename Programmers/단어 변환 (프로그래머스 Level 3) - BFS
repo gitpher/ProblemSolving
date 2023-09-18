@@ -1,0 +1,29 @@
+from collections import deque
+
+def solution(begin, target, words):
+
+    def is_one_character_different(word1, word2):
+        cnt = 0
+        for i in range(len(word1)):
+            if word1[i] != word2[i]:
+                cnt += 1
+        return True if cnt == 1 else False
+
+    visited = [0] * len(words)
+    
+    def bfs(begin, target):
+        dq = deque()
+        dq.append((begin, 0))
+        while dq:
+            word, step = dq.popleft()
+            if word == target:
+                return step
+
+            for idx, val in enumerate(words):
+                if visited[idx] == 0 and is_one_character_different(word, val):
+                    visited[idx] = 1
+                    dq.append((val, step + 1))
+
+        return 0
+
+    return bfs(begin, target)
