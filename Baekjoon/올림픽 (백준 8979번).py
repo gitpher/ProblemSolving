@@ -9,13 +9,10 @@ for _ in range(N):
 olympic.sort(key=lambda x: (-x[1], -x[2], -x[3]))
 
 rank = 0
-last = (0, 0, 0, 0)
 for idx, val in enumerate(olympic):
-    if not (last[1] == val[1] and last[2] == val[2] and last[3] == val[3]):
+    if val[1:] != olympic[idx-1][1:]:
         rank = idx + 1
 
     if val[0] == K:
         print(rank)
         break
-
-    last = val
